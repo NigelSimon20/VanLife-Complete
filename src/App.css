@@ -1,0 +1,13 @@
+.bg {
+    background-image: url('./img/image\ 54.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 83.9vh;
+}
+
+a.active{
+    text-decoration: underline;
+    font-weight: bold;
+    transition: all 1s;
+}
