@@ -1,14 +1,16 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
 
 
 const Carinfo = (props) => {
   return (
     <div className=" container mx-auto max-w-md space-y-5 bg-lightPink p-6 mb-8 font-variant md:max-w-full">
       {/* Back Arrow */}
-      <div className="space-x-2">
+      <div className="space-x-3">
         <FontAwesomeIcon icon={faArrowLeft} />
+        <NavLink>Back to all vans</NavLink>
         
       </div>
 

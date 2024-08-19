@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import AnimatedPages from "./AnimatedPages";
+
 
 const About = () => {
   return (
-    <div>About</div>
-  )
-}
+    <AnimatedPages>
+      <div>
+        
+        About
+        </div>
+    </AnimatedPages>
+  );
+};
 
-export default About
+export default About;

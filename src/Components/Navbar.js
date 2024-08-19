@@ -1,9 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import AnimatedPages from "../Pages/AnimatedPages";
 
 const Navbar = (props) => {
   return (
-    <div className="container mx-auto flex justify-between font-variant items-center p-5 shadow-lg  bg-[#FFF7ED]">
+    <AnimatedPages>
+    <div className="flex justify-between font-variant items-center p-5 shadow-lg  bg-[#FFF7ED]">
       <NavLink to='/Home'>
         <h1 className="font-bold text-2xl">#CarRental</h1>
       </NavLink>
@@ -13,6 +15,7 @@ const Navbar = (props) => {
         <NavLink to="/Vans">Vans</NavLink>
       </div>
     </div>
+    </AnimatedPages>
   );
 };
 

@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import AnimatedPages from "./AnimatedPages";
+
 
 const Vans = () => {
   return (
-    <div>Vans</div>
-  )
-}
+    <AnimatedPages>
+      <div>
+        
+        Vans
+      </div>
+    </AnimatedPages>
+  );
+};
 
-export default Vans
+export default Vans;

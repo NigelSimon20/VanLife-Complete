@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import AnimatedPages from "./AnimatedPages";
 
 const Host = () => {
   return (
-    <div>
-     
-    </div>
-  )
-}
+    <AnimatedPages>
+      <div></div>
+    </AnimatedPages>
+  );
+};
 
-export default Host
+export default Host;
