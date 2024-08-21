@@ -6,5 +6,10 @@
     font-family:'inter';
     src: url(./Font/Inter-VariableFont_slnt\,wght.ttf);
 }
+@font-face {
+    font-family:'inter_regular';
+    src: url(./Font/Inter-Regular.ttf);
+}
+
 
 

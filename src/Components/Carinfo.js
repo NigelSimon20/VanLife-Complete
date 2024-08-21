@@ -2,16 +2,19 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 const Carinfo = (props) => {
   return (
     <div className=" container mx-auto max-w-md space-y-5 bg-lightPink p-6 mb-8 font-variant md:max-w-full">
       {/* Back Arrow */}
-      <div className="space-x-3">
-        <FontAwesomeIcon icon={faArrowLeft} />
-        <NavLink>Back to all vans</NavLink>
-        
+      <div className="space-x-3 flex items-center ">
+        <NavLink to="/Vans">
+          <div className="flex items-center space-x-2">
+            <FontAwesomeIcon icon={faArrowLeft} />
+            <p> Back to all vans</p>
+          </div>
+        </NavLink>
       </div>
 
       <div className="md:flex space-y-5 md:space-x-6">
@@ -39,9 +42,11 @@ const Carinfo = (props) => {
           <p>{props.paragraph}</p>
 
           {/* Big button */}
-          <button className="bg-lightOrange text-white font-semibold w-full md:w-[30%] rounded-md p-2">
-            Rent this van
-          </button>
+          <div className="bg-lightOrange text-white font-semibold w-full md:w-[30%] rounded-md p-2 text-center">
+            <Link to="/SignUp">
+              <button>Rent this van</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

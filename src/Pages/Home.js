@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -16,9 +16,11 @@ const Home = () => {
             Add adventure to your life by joining the #vanlife movement. Rent
             the perfect van to make your perfect road trip.
           </p>
-          <button className="bg-[#FF8C38] text-white w-full md:w-[25%] rounded-xl p-3 font-semibold">
-            Find your van
-          </button>
+          <Link to='/Dashboard' className="bg-[#FF8C38] text-white w-full md:w-[25%] rounded-xl p-3 font-semibold text-center">
+            <button>
+              Find your van
+            </button>
+          </Link>
         </div>
       </section>
     </div>

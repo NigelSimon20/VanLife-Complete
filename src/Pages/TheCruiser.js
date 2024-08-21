@@ -1,5 +1,5 @@
 import React from 'react'
-import van5 from  '../img/van5.png'
+import van5 from  '../img/van4.png'
 import Carinfo from '../Components/Carinfo'
 
 const TheCruiser = () => {

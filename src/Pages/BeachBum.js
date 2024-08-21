@@ -1,12 +1,12 @@
 import React from 'react'
-import van2 from '../img/van2.png'
+import van6 from '../img/van6.png'
 import Carinfo from '../Components/Carinfo'
 
 const BeachBum = () => {
   return (
     <div>
         <Carinfo
-        image={van2}
+        image={van6}
         heading="Beach Bum"
         price="$80"
         firstbtn="Rugged"
