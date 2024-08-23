@@ -3,53 +3,56 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+import AnimatedPages from "../Pages/AnimatedPages";
 
 const Carinfo = (props) => {
   return (
-    <div className=" container mx-auto max-w-md space-y-5 bg-lightPink p-6 mb-8 font-variant md:max-w-full">
-      {/* Back Arrow */}
-      <div className="space-x-3 flex items-center ">
-        <NavLink to="/Vans">
-          <div className="flex items-center space-x-2">
-            <FontAwesomeIcon icon={faArrowLeft} />
-            <p> Back to all vans</p>
-          </div>
-        </NavLink>
-      </div>
-
-      <div className="md:flex space-y-5 md:space-x-6">
-        {/* Picture of selected car */}
-        <div>
-          <img src={props.image} className=" rounded-md" alt="" />
+    <AnimatedPages>
+      <div className=" container mx-auto max-w-md space-y-5 bg-lightPink p-6 mb-8 font-variant md:max-w-full">
+        {/* Back Arrow */}
+        <div className="space-x-3 flex items-center ">
+          <NavLink to="/Vans">
+            <div className="flex items-center space-x-2">
+              <FontAwesomeIcon icon={faArrowLeft} />
+              <p> Back to all vans</p>
+            </div>
+          </NavLink>
         </div>
 
-        <div className="md:flex-col space-y-5 ml-0">
-          {/*Small Button */}
-          <button className="font-semibold pl-5 pr-5 pt-2 pb-2 rounded-md bg-darkOrange text-white ">
-            {props.firstbtn}
-          </button>
-
-          {/* Heading */}
-          <h2 className="font-bold text-3xl">{props.heading}</h2>
-
-          {/* Price */}
-          <div className="flex">
-            <p className="font-bold text-1xl">{props.price}</p>
-            <p>/day</p>
+        <div className="md:flex space-y-5 md:space-x-6">
+          {/* Picture of selected car */}
+          <div>
+            <img src={props.image} className=" rounded-md" alt="" />
           </div>
 
-          {/* Paragraph */}
-          <p>{props.paragraph}</p>
+          <div className="md:flex-col md:flex md:justify-center space-y-5 ml-0">
+            {/*Small Button */}
+            <button className="font-semibold px-5 md:px-2 py-2 md:w-[12%] rounded-md bg-darkOrange text-white ">
+              {props.firstbtn}
+            </button>
 
-          {/* Big button */}
-          <div className="bg-lightOrange text-white font-semibold w-full md:w-[30%] rounded-md p-2 text-center">
-            <Link to="/SignUp">
-              <button>Rent this van</button>
-            </Link>
+            {/* Heading */}
+            <h2 className="font-bold text-3xl">{props.heading}</h2>
+
+            {/* Price */}
+            <div className="flex">
+              <p className="font-bold text-1xl">{props.price}</p>
+              <p>/day</p>
+            </div>
+
+            {/* Paragraph */}
+            <p>{props.paragraph}</p>
+
+            {/* Big button */}
+            <div className="bg-lightOrange text-white font-semibold w-full md:w-[40%] rounded-md p-2 text-center">
+              <Link to="/SignUp">
+                <button>Rent this van</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </AnimatedPages>
   );
 };
 

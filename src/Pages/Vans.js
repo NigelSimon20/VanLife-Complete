@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Vans from "../Components/Vans";
 import Picture1 from "../img/van1.png";
-import Picture2 from "../img/van3.png";
-import Picture3 from "../img/van2.png";
-import Picture4 from "../img/van6.png";
-import Picture5 from "../img/van4.png";
-import Picture6 from "../img/van5.png";
+import Picture2 from "../img/van2.png";
+import Picture3 from "../img/van3.png";
+import Picture4 from "../img/van4.png";
+import Picture5 from "../img/van5.png";
+import Picture6 from "../img/van6.png";
 import { NavLink } from "react-router-dom";
+import AnimatedPages from "./AnimatedPages";
 
 const Explore = () => {
   const [filter, setFilter] = useState("All");
@@ -19,7 +20,7 @@ const Explore = () => {
       Price: "$60",
       Day: "/day",
       Button: "Simple",
-      bgColor: "green",
+      bgColor: "black",
       path: "/ModestExplorer",
     },
     {
@@ -69,62 +70,62 @@ const Explore = () => {
     },
   ];
 
-  
   const filteredVans = vans.filter((van) =>
     filter === "All" ? true : van.Button === filter
   );
 
   return (
-    <div className="flex flex-col font-variant pl-5 md:pl-10">
-      {/* Explore Page H2 */}
-      <h2 className="font-bold text-2xl mb-3 md:mb-6 md:text-4xl text-lightGray">
-        Explore our van options
-      </h2>
-      {/* Explore Page Top Buttons */}
-      <div className="flex space-x-2 mb-9 md:space-x-5 text-lightGray items-center">
-        <button
-          className="text-sm py-1 px-3 md:py-2 md:px-4 md:text-3xl bg-lightPink rounded-md hover:bg-reddish hover:text-lightPink transition duration-300"
-          onClick={() => setFilter("Simple")}
-        >
-          Simple
-        </button>
-        <button
-          className="text-sm py-1 px-3 md:py-2 md:px-4 md:text-3xl bg-lightPink rounded-md hover:bg-black hover:text-lightPink transition duration-300"
-          onClick={() => setFilter("Luxury")}
-        >
-          Luxury
-        </button>
-        <button
-          className="text-sm py-1 px-3 md:py-2 md:px-4 md:text-3xl bg-lightPink rounded-md hover:bg-green hover:text-lightPink transition duration-300"
-          onClick={() => setFilter("Rugged")}
-        >
-          Rugged
-        </button>
-        <NavLink
-          to="/Vans"
-          className="text-sm md:text-3xl"
-          onClick={() => setFilter("All")}
-        >
-          Clear filters
-        </NavLink>
+    <AnimatedPages>
+      <div className="flex flex-col font-variant pl-5 md:pl-10 bg-lightPink">
+        {/* Explore Page H2 */}
+        <h2 className="font-bold text-2xl pt-20 mb-3 md:mb-6 md:text-4xl text-lightGray">
+          Explore our van options
+        </h2>
+        {/* Explore Page Top Buttons */}
+        <div className="flex space-x-2 mb-9 md:space-x-5 text-lightGray items-center">
+          <button
+            className="text-sm py-1 px-3 md:py-1 md:px-3 md:text-2xl bg-lighterPink rounded-md hover:bg-reddish hover:text-lightPink transition duration-300"
+            onClick={() => setFilter("Simple")}
+          >
+            Simple
+          </button>
+          <button
+            className="text-sm py-1 px-3 md:py-1 md:px-3 md:text-2xl bg-lighterPink rounded-md hover:bg-black hover:text-lightPink transition duration-300"
+            onClick={() => setFilter("Luxury")}
+          >
+            Luxury
+          </button>
+          <button
+            className="text-sm py-1 px-3 md:py-1 md:px-3 md:text-2xl bg-lighterPink rounded-md hover:bg-green hover:text-lightPink transition duration-300"
+            onClick={() => setFilter("Rugged")}
+          >
+            Rugged
+          </button>
+          <NavLink
+            to="/Vans"
+            className="text-xs font-thin text-grey md:text-[20px]"
+            onClick={() => setFilter("All")}
+          >
+            Clear filters
+          </NavLink>
+        </div>
+        {/* Component Div */}
+        <div className="flex flex-wrap">
+          {filteredVans.map((van, index) => (
+            <Vans
+              key={index}
+              Picture={van.Picture}
+              Heading={van.Heading}
+              Price={van.Price}
+              Day={van.Day}
+              Button={van.Button}
+              bgColor={van.bgColor}
+              path={van.path}
+            />
+          ))}
+        </div>
       </div>
-      {/* Component Div */}
-      <div className="flex flex-wrap">
-       
-        {filteredVans.map((van, index) => (
-          <Vans
-            key={index}
-            Picture={van.Picture}
-            Heading={van.Heading}
-            Price={van.Price}
-            Day={van.Day}
-            Button={van.Button}
-            bgColor={van.bgColor}
-            path={van.path}
-          />
-        ))}
-      </div>
-    </div>
+    </AnimatedPages>
   );
 };
 

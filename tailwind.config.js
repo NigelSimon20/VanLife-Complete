@@ -10,7 +10,8 @@ module.exports = {
         green: '#115E59',
         reddish:'#E17654',
         lighterPink:'#FFEAD0',
-        orange:'#FF8C38'
+        orange:'#FF8C38',
+        grey:'#4D4D4D'
       },
       fontFamily:{
       variant:['inter']

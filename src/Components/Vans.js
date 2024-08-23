@@ -25,7 +25,7 @@ const Vans = (props) => {
       </div>
       {/* Button */}
       <button
-        className={` bg-${props.bgColor} py-2 px-4 text-x rounded-md text-white font-bold md:text-2xl md:py-2 md:px-6  `}
+        className={` bg-${props.bgColor} py-1 px-4 text-xs rounded-md text-white font-semibold md:text-2xl md:py-2 md:px-6  `}
       >
         {props.Button}
       </button>

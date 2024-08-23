@@ -1,5 +1,5 @@
 import React from 'react'
-import van6 from '../img/van5.png'
+import van6 from '../img/van6.png'
 import Carinfo from '../Components/Carinfo'
 
 const GreenWonder = () => {

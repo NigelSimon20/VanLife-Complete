@@ -16,16 +16,22 @@ import TheCruiser from "./Pages/TheCruiser.js";
 import SignUp from "./Pages/SignUp.js";
 import Dashboard from "./Pages/Dashboard.js";
 import Forms from "./Pages/Forms.js";
-import Income from "./Pages/Income.js";
-import DashVans from "./Pages/DashVans.js";
-import Reviews from "./Pages/Reviews.js";
+
+
+
 import DashboardLayout from "./Components/DashLayout.js";
+import TabzModest from "./Pages/TabzModest.js";
+import VanChatbot from "./Components/VanChatbot.js";
+import TabzBeachBum from "./Pages/TabzBeachBum.js";
+import TabzGreenWonder from './Pages/TabzGreenWonder.js'
+import Lists from "./Pages/List.js";
 
 function App() {
   return (
     <AnimatedPages>
       <div className="App">
         <Navbar />
+        <VanChatbot/>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="Home" element={<Home />}></Route>
@@ -41,10 +47,15 @@ function App() {
           <Route path="SignUp" element={<SignUp />}></Route>
           <Route path="Dashboard" element={<Dashboard />}></Route>
           <Route path="Forms" element={<Forms />}></Route>
-          <Route path="Income" element={<Income />}></Route>
-          <Route path="DashVans" element={<DashVans />}></Route>
-          <Route path="Reviews" element={<Reviews />}></Route>
+         
+          
+         
           <Route path="/" element={<DashboardLayout />}></Route>
+          <Route path="TabzModest" element={<TabzModest />}></Route>
+          <Route path="TabzBeachBum" element={<TabzBeachBum />}></Route>
+          <Route path="GreenWonder" element={<GreenWonder />}></Route>
+          <Route path="TabzGreenWonder" element={<TabzGreenWonder />}></Route>
+          <Route path="Lists" element={<Lists />}></Route>
         </Routes>
         <Footer />
       </div>
