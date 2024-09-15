@@ -20,7 +20,7 @@ const Explore = () => {
       Price: "$60",
       Day: "/day",
       Button: "Simple",
-      bgColor: "reddish",
+      bgColor: "black",
       path: "/ModestExplorer",
     },
     {
@@ -29,7 +29,7 @@ const Explore = () => {
       Price: "$80",
       Day: "/day",
       Button: "Rugged",
-      bgColor: "green",
+      bgColor: "black",
       path: "/BeachBum",
     },
     {
@@ -47,7 +47,7 @@ const Explore = () => {
       Price: "$65",
       Day: "/day",
       Button: "Simple",
-      bgColor: "reddish",
+      bgColor: "black",
       path: "/Dreamfinder",
     },
     {
@@ -65,7 +65,7 @@ const Explore = () => {
       Price: "$70",
       Day: "/day",
       Button: "Rugged",
-      bgColor: "green",
+      bgColor: "black",
       path: "/GreenWonder",
     },
   ];
