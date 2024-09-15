@@ -44,11 +44,11 @@ const Carinfo = (props) => {
             <p>{props.paragraph}</p>
 
             {/* Big button */}
-            <div className="bg-lightOrange text-white font-semibold w-full md:w-[40%] rounded-md p-2 text-center">
-              <Link to="/SignUp">
+            <Link to="/SignUp">
+              <div className="bg-lightOrange text-white font-semibold w-full md:w-[40%] rounded-md p-2 text-center">
                 <button>Rent this van</button>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ const Forms = () => {
       await signInWithEmailAndPassword(auth, email, password);
       console.log("User signed in successfully!");
 
-      navigate("/Dashboard");
+      navigate("/Host");
     } catch (error) {
       console.error("Error signing in:", error.message);
 
