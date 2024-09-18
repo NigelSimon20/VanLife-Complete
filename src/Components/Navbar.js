@@ -25,7 +25,7 @@ const Navbar = () => {
         </div>
 
         {/* Menu Links */}
-        <div className={`space-x-3 font-semibold text-[#4D4D4D] pr-9 hidden md:flex`}>
+        <div className={`space-x-3 font-semibold text-[#4D4D4D] pr-9  md:items-center hidden md:flex`}>
           <NavLink to="/SignUp">Host</NavLink>
           <NavLink to="/About">About</NavLink>
           <NavLink to="/Vans">Vans</NavLink>
@@ -34,7 +34,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="absolute top-[10vh] left-0 w-full bg-[#FFF7ED] flex flex-col items-center space-y-4 py-4 md:hidden z-10 shadow-lg">
+          <div className="absolute top-[10vh] left-0 w-full bg-[#FFF7ED] flex flex-col items-center  space-y-4 py-4 md:hidden z-10 shadow-lg">
             <NavLink to="/SignUp" onClick={toggleMenu}>Host</NavLink>
             <NavLink to="/About" onClick={toggleMenu}>About</NavLink>
             <NavLink to="/Vans" onClick={toggleMenu}>Vans</NavLink>
